@@ -21,40 +21,13 @@ namespace CS280_Homework_2
 
             Console.WriteLine("請輸入一隻Pokemon:");
             Console.Write("Name: ");
-            try
-            {
-                name = Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Name輸入錯誤");
-                Console.WriteLine("錯誤訊息:\n" + e.ToString());
-                return;
-            }
+            name = Console.ReadLine();
 
             Console.Write("NationalNo: ");
-            try
-            {
-                nationalno = Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("NationalNo輸入錯誤");
-                Console.WriteLine("錯誤訊息:\n" + e.ToString());
-                return;
-            }
+            nationalno = Console.ReadLine();
 
             Console.Write("Abilities: ");
-            try
-            {
-                abilities = Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Abilities輸入錯誤");
-                Console.WriteLine("錯誤訊息:\n" + e.ToString());
-                return;
-            }
+            abilities = Console.ReadLine();
 
             Console.Write("Height: ");
             try
@@ -63,7 +36,7 @@ namespace CS280_Homework_2
             }
             catch (Exception e)
             {
-                Console.WriteLine("Height輸入錯誤");
+                Console.WriteLine("Height輸入錯誤，請輸入數字");
                 Console.WriteLine("錯誤訊息:\n" + e.ToString());
                 return;
             }
@@ -75,43 +48,27 @@ namespace CS280_Homework_2
             }
             catch (Exception e)
             {
-                Console.WriteLine("Weight輸入錯誤");
+                Console.WriteLine("Weight輸入錯誤，請輸入數字");
                 Console.WriteLine("錯誤訊息:\n" + e.ToString());
                 return;
             }
 
             Console.Write("Category: ");
-            try
-            {
-                category = Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Category輸入錯誤");
-                Console.WriteLine("錯誤訊息:\n" + e.ToString());
-                return;
-            }
+            category = Console.ReadLine();
 
             Console.Write("Gender: ");
-            try
-            {
-                gender = Console.ReadLine();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Gender輸入錯誤");
-                Console.WriteLine("錯誤訊息:\n" + e.ToString());
-                return;
-            }
+            gender = Console.ReadLine();
 
             Pokemon pokemon = new Pokemon();
-            pokemon.NationalNo = nationalno;
             pokemon.Name = name;
+            pokemon.NationalNo = nationalno;
+            pokemon.Abilities = abilities;
             pokemon.Height = height;
             pokemon.Weight = weight;
             pokemon.Category = category;
-            pokemon.Abilities = abilities;
             pokemon.Gender = gender;
+
+            Console.WriteLine("建立完成！");
         }
     }
 }
